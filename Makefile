@@ -3,18 +3,19 @@
 VERSION=0.2.6
 BUILD=1
 
-ARCH=$(shell uname -p)
+ARCH=$(shell uname -m)
 AIA=./AppImageAssistant_6-$(ARCH).AppImage
 NATIVE_EXT=build/iris-lib/node_modules/serialport/build/Release/serialport.node
+OUT=EaselDriver-$(VERSION)-$(ARCH)-$(BUILD).AppImage
 
 ifneq ($(shell node --version),v4.5.0)
-	$(error node version must be v4.5.0 but got $(shell node --version))
+$(error node version must be v4.5.0 but got $(shell node --version))
 else ifneq ($(shell npm --version),3.10.7)
-	$(error npm version must be 3.10.7 but got $(shell npm --version))
+$(error npm version must be 3.10.7 but got $(shell npm --version))
 endif
 
 
-EaselDriver-$(VERSION)-$(ARCH)-$(BUILD).AppImage: build/AppRun build/easel.svg build/easel-driver.desktop build/node $(NATIVE_EXT)
+$(OUT): build/AppRun build/easel.svg build/easel-driver.desktop build/node $(NATIVE_EXT)
 	-rm $@
 	$(AIA) build $@
 
@@ -46,5 +47,5 @@ build:
 	mkdir -p build
 
 clean:
-	rm -rf tempdir build
+	rm -rf tempdir build $(OUT)
 
