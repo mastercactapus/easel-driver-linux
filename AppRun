@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+
+APP_DIR=`dirname $0`
+APP_DIR=`cd "$APP_DIR";pwd`
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$APP_DIR/lib
+
+exec "$APP_DIR/node" "$APP_DIR/iris-lib/iris.js"
+

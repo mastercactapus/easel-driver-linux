@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=EaselDriver
+Exec=AppRun
+Terminal=true
+Icon=easel.svg
+
