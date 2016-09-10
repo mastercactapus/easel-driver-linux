@@ -3,9 +3,13 @@
 This repo contains scripts for re-packaging/compiling the easel driver for use on linux systems.
 The released *AppImage* files are self-contained executables with all dependencies bundled.
 
+An exception is **libfuse2** which is preinstalled already on most systems, but some Raspberry Pi distros may require
+you to install it (e.g. raspbian-lite). This is because AppImages use fuse to mount without requiring
+root.
+
 More info here: [AppImage](http://appimage.org/)
 
-You can download releases here: [releases](https://github.com/mastercactapus/easel-driver-linux/releases)
+You can download pre-built releases here: [releases](https://github.com/mastercactapus/easel-driver-linux/releases)
 
 # Building
 
