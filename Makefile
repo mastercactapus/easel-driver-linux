@@ -6,7 +6,7 @@ BUILD=1
 ARCH=$(shell uname -m)
 AIA=./AppImageAssistant_6-$(ARCH).AppImage
 NATIVE_EXT=build/iris-lib/node_modules/serialport/build/Release/serialport.node
-OUT=EaselDriver-$(VERSION)-$(ARCH)-$(BUILD).AppImage
+OUT=EaselDriver-$(VERSION)-$(BUILD)-$(ARCH).AppImage
 
 ifneq ($(shell node --version),v4.5.0)
 $(error node version must be v4.5.0 but got $(shell node --version))
