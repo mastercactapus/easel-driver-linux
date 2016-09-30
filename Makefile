@@ -1,6 +1,6 @@
 .PHONY: clean
 
-VERSION=0.2.6
+VERSION=0.2.7
 BUILD=1
 
 ARCH=$(shell uname -m)
@@ -36,16 +36,15 @@ $(NATIVE_EXT): build/iris-lib/iris.js build
 build/node: build
 	cp $(shell which node) build/
 
-build/iris-lib/iris.js: EaselDriver-0.2.6.pkg build
+build/iris-lib/iris.js: EaselDriver-$(VERSION).pkg build
 	rm -rf tempdir
 	mkdir tempdir
-	7z x -otempdir EaselDriver-0.2.6.pkg
+	7z x -otempdir EaselDriver-$(VERSION).pkg
 	mkdir -p build/iris-lib
-	(cd build/iris-lib && gunzip <../../tempdir/IrisLib-0.2.6.pkg/Payload | cpio -i)
+	(cd build/iris-lib && gunzip <../../tempdir/IrisLib-$(VERSION).pkg/Payload | cpio -i)
 	rm -rf tempdir
 build:
 	mkdir -p build
 
 clean:
 	rm -rf tempdir build $(OUT)
-
