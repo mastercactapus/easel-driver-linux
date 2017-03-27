@@ -1,6 +1,6 @@
 .PHONY: clean
 
-VERSION=0.2.7
+VERSION=0.3.3
 BUILD=1
 
 ARCH=$(shell uname -m)

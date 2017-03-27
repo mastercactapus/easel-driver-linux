@@ -6,5 +6,7 @@ APP_DIR=`cd "$APP_DIR";pwd`
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$APP_DIR/lib
 
+cd "$APP_DIR/iris-lib"
+
 exec "$APP_DIR/node" "$APP_DIR/iris-lib/iris.js"
 
