@@ -1,4 +1,4 @@
-.PHONY: clean
+.PHONY: clean AppDir
 
 VERSION=0.3.3
 BUILD=1
@@ -8,16 +8,13 @@ AIA=./appimagetool-$(ARCH).AppImage
 NATIVE_EXT=build/iris-lib/node_modules/serialport/build/Release/serialport.node
 OUT=EaselDriver-$(VERSION)-$(BUILD)-$(ARCH).AppImage
 
-ifneq ($(shell node --version),v4.5.0)
-$(error node version must be v4.5.0 but got $(shell node --version))
-else ifneq ($(shell npm --version),3.10.7)
-$(error npm version must be 3.10.7 but got $(shell npm --version))
-endif
 
 
 $(OUT): build/AppRun build/easel.svg build/easel-driver.desktop build/node $(NATIVE_EXT)
 	-rm $@
 	$(AIA) build $@
+
+AppDir: $(NATIVE_EXT) build/AppRun build/easel.svg build/easel-driver.desktop
 
 build/AppRun: AppRun build
 	cp AppRun build/
