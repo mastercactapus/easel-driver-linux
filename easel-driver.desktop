@@ -3,3 +3,4 @@ Name=EaselDriver
 Exec=AppRun
 Terminal=true
 Icon=easel
+Type=Application
