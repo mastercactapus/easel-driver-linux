@@ -4,7 +4,7 @@ VERSION=0.3.3
 BUILD=1
 
 ARCH=$(shell uname -m)
-AIA=./AppImageAssistant_6-$(ARCH).AppImage
+AIA=./appimagetool-$(ARCH).AppImage
 NATIVE_EXT=build/iris-lib/node_modules/serialport/build/Release/serialport.node
 OUT=EaselDriver-$(VERSION)-$(BUILD)-$(ARCH).AppImage
 

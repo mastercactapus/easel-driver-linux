@@ -2,5 +2,4 @@
 Name=EaselDriver
 Exec=AppRun
 Terminal=true
-Icon=easel.svg
-
+Icon=easel

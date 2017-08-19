@@ -26,14 +26,14 @@ node to build native extensions.
 
 The following files must be present in the repo root:
 
-- AppImageAssistant_6-<..your-arch-here..>.AppImage
-- EaselDriver-0.2.6.pkg
+- appimagetool-<..your-arch-here..>.AppImage
+- EaselDriver-0.3.3.pkg
 
-AppImageAssistant is part of [AppImageKit](https://github.com/probonopd/AppImageKit). If you are targeting a
+appimagetool is part of [AppImageKit](https://github.com/probonopd/AppImageKit). If you are targeting a
 platform that doesn't have pre-built versions, you will have to clone the *AppImageKit* repo and run `build.sh`
 to build the tools.
 
-EaselDriver-0.2.6.pkg can be found via the **mac** download link from the easel setup page.
+EaselDriver-0.3.3.pkg can be found via the **mac** download link from the easel setup page.
 
 
 # Disclaimer
