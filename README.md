@@ -9,7 +9,10 @@ root.
 
 More info here: [AppImage](http://appimage.org/)
 
-You can download pre-built releases here: [releases](https://github.com/mastercactapus/easel-driver-linux/releases)
+## Download
+
+Find pre-built [releases here](http://download.opensuse.org/repositories/home:/mastercactapus/AppImage/) and [arm builds here](http://download.opensuse.org/repositories/home:/mastercactapus/AppImage.arm/).
+
 
 # Building
 
